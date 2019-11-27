@@ -18,7 +18,7 @@ const createSongList = () => {
 
 document.getElementById('songList').appendChild(createSongList())
 
-songList.onclick = (e) => {
+songList.onclick = e => {
   const clickedItem = e.target
   const source = document.getElementById('source')
     source.src = 'music/' + clickedItem.innerText + '.mp3'
@@ -42,7 +42,7 @@ const pauseAudio = () => {
 }
 
 const slider = document.getElementById('volumeSlider')
-slider.oninput = (e) => {
+slider.oninput = e => {
   const volume = e.target.value
   player.volume = volume
 }
